@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, shrink-to-fit=no, user-scalable=no">
 	<meta name="theme-color" content="#000000">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<meta name="apple-mobile-web-app-capable" content="yes">
 	<!--
 	manifest.json provides metadata used when your web app is added to the
 	homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
@@ -13,6 +13,7 @@
 <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:700" type="text/css" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300" type="text/css" />
+<link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
 <!--
 Notice the use of %PUBLIC_URL% in the tags above.
 It will be replaced with the URL of the `public` folder during the build.
@@ -25,9 +26,6 @@ Learn how to configure a non-root public URL by running `npm run build`.
 <title>React App</title>
 </head>
 <body>
-	<noscript>
-		You need to enable JavaScript to run this app.
-	</noscript>
 
 	<div id="root"></div>
 	<!--
@@ -40,13 +38,6 @@ Learn how to configure a non-root public URL by running `npm run build`.
 	To begin the development, run `npm start` or `yarn start`.
 	To create a production bundle, use `npm run build` or `yarn build`.
 -->
-<script>
-var out = document.getElementById("root")
-// allow 1px inaccuracy by adding 1
-var isScrolledToBottom = out.scrollHeight - out.clientHeight <= out.scrollTop + 1
-if(!isScrolledToBottom){
-	out.scrollTop = out.scrollHeight - out.clientHeight;
-}
-</script>
+
 </body>
 </html>

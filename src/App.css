@@ -1,17 +1,3 @@
-body {
-  width: 100wh;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  height: 90vh;
-  color: #fff;
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-  background-size: 400% 400%;
-  -webkit-font-smoothing: antialiased;
-  -webkit-animation: Gradient 15s ease infinite;
-  -moz-animation: Gradient 15s ease infinite;
-  animation: Gradient 15s ease infinite;
-}
-
 /* @font-face {
   font-family: "Regular";
   src: url("https://fonts.googleapis.com/css?family=Open+Sans:300");
@@ -119,6 +105,23 @@ body {
   }
 }
 
+@keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
 @keyframes bounce {
   from,
   20%,
@@ -157,12 +160,22 @@ body {
     height: 0;
   }
   to {
-    height: 400px;
+    height: 380px;
+  }
+}
+
+@keyframes menuHeightMobile {
+  from {
+    height: 0;
+  }
+  to {
+    height: 287px;
   }
 }
 
 .bounce {
-  animation: bounce 1s;
+  animation: pulse 1.5s;
+  animation-iteration-count: infinite;
 }
 
 .fadeIn {
@@ -178,73 +191,349 @@ body {
 }
 
 h1,
-h2 {
-  font-family: "Open Sans";
+h2,
+p,
+h3,
+h5,
+a {
+  font-family: "Fjalla One", sans-serif;
+  color: white;
   text-align: center;
   line-height: 1.2;
+  text-decoration: none;
 }
 
 .App h1 {
-  letter-spacing: 13px;
+  letter-spacing: 23px;
   width: 100%;
+  color: white;
   margin: auto;
   font-weight: 700;
+  font-style: italic;
+
   font-size: 86px;
   padding-top: 130px;
+  text-shadow: 4px 4px 0px #23d5ab;
 }
 
 .App h2 {
+  display: block;
   letter-spacing: 16px;
   width: 100%;
+  font-style: italic;
   margin: auto;
   margin-bottom: 30px;
   font-weight: 500;
   font-size: 48px;
   color: #23d5ab;
+  /* background-image: linear-gradient(
+    90deg,
+    transparent 20px,
+    rgba(255, 255, 255, 1) 55%,
+    rgba(255, 255, 255, 0.6825105042016807) 100%
+  ); */
+}
+
+#mamVid {
+  height: auto;
+  width: 90%;
+  border: 1px solid darkgray;
+  animation: fadeIn 2s;
+}
+#top19 {
+  height: auto;
+  width: 90%;
+  border: 1px solid darkgray;
 }
 
 /* FullMenu */
 
+.menuDiv h3 {
+  display: inline-block;
+  font-size: 30px;
+
+  margin-right: 50%;
+  margin-top: 50px;
+  letter-spacing: 12px;
+}
+
+span {
+  /* background-image: linear-gradient(transparent 3vw, #f243b3 50%, #ffca47 100%); */
+  /* background-image: linear-gradient(
+    90deg,
+    transparent 3vw,
+    rgba(255, 255, 255, 1) 55%,
+    rgba(255, 255, 255, 0.6825105042016807) 100%
+  ); */
+  line-height: 0.1em; /* Positive value. */
+  vertical-align: 0.5em; /* Positive value. */
+  border-bottom: 2px solid transparent;
+  border-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.5186449579831933) 34%,
+    rgba(255, 255, 255, 0.5998774509803921) 39%,
+    rgba(255, 255, 255, 0) 94%
+  );
+  border-image-slice: 1;
+}
+/* @keyframes borderHover {
+  from {
+    border-bottom: 2px solid transparent !important;
+  }
+  to {
+    border-bottom: 2px solid white !important;
+  }
+} */
+span:hover {
+  font-style: italic;
+  /* animation: borderHover 1s; */
+  cursor: default;
+}
+
+#h32 {
+  margin-right: 50%;
+}
+
 #triangle {
   height: 50px;
-  width: 71%;
-  margin-top: -1.5px;
+  width: 73%;
+  margin-top: -2.5px;
+  padding-bottom: 20px;
 }
 .menuDiv {
-  height: 400px;
+  border-radius: 3px;
+  position: relative;
+  text-align: right;
+
+  height: 380px;
   margin: 0 auto;
   overflow: auto;
+  min-width: 660px;
   width: 68.5%;
   border: 3px solid white;
   animation: menuHeight 1.5s;
+  overflow: hidden;
+}
+.textContain {
+  position: absolute;
+  top: 4%;
+  text-align: left;
+  height: 88%;
+  margin-top: 21px;
+  overflow-y: scroll;
+  max-width: 38%;
+  left: 56%;
+  padding-bottom: 20px;
+}
+
+.menuDiv p,
+h5,
+a {
+  display: inline-block;
+  padding-bottom: 2px;
+  text-align: left;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: 18px;
+}
+
+.menuDiv h5 {
+  font-size: 24px;
+  padding-bottom: 5px;
+  margin: 0;
 }
 
 #triangleDiv {
   text-align: center;
 }
 
+#mePic {
+  position: absolute;
+  right: 85px;
+  top: 62px;
+  height: auto;
+  width: 230px;
+}
+
+#triangle:hover {
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 1s;
+}
+
+.fadeOut {
+  animation: fadeOut 1s;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+#menuP4 {
+  display: inherit;
+}
+
+#mePicMobile {
+  visibility: hidden;
+  height: 0;
+  width: 0;
+}
+
 /* media queries */
 /* phones */
 @media only screen and (min-width: 320px) and (max-width: 740px) {
   .App h1 {
-    font-weight: 500;
+    font-weight: 700;
     font-size: 56px;
     padding-top: 10%;
+    text-shadow: 3.3px 3.3px 0px #23d5ab;
+  }
+
+  .App {
+    text-align: center;
+  }
+
+  .textContain {
+    position: relative;
+    top: auto;
+    height: auto;
+    overflow-y: auto;
+    max-width: 100%;
+    left: auto;
+    margin-top: -12px;
+    animation: fadeIn 1s;
+    margin-left: 15px !important;
+  }
+
+  #h32 {
+    margin: auto !important;
+    margin-top: 35px !important;
+    margin-bottom: 35px !important;
+  }
+
+  .bounce {
+    animation: pulse 1s;
+    animation-iteration-count: infinite;
+  }
+
+  #FullMenu {
+    text-align: center;
   }
 
   .App h2 {
     font-size: 38px;
     letter-spacing: 6px;
+
     margin-bottom: 20px;
   }
   #triangle {
-    width: 222px;
-    height: 30px;
-    margin-top: -1.5px;
+    height: 47px;
+    margin-top: -2px;
   }
+
   .menuDiv {
-    width: 55.5%;
-    margin-top: 30px;
+    height: 287px;
+    overflow-y: scroll;
+    margin-top: 10px;
+    min-width: auto;
+    text-align: center !important;
+    animation: menuHeightMobile 1.5s;
+  }
+
+  .menuDiv h3 {
+    text-align: center !important;
+    font-size: 20px;
+    margin: auto !important;
+    margin-top: 35px !important;
+    margin-bottom: 35px !important;
+    margin-left: 10px;
+    letter-spacing: 12px;
+  }
+
+  .menuDiv p,
+  h5,
+  a {
+    margin-top: auto;
+    text-align: left !important;
+    display: block;
+    position: relative;
+    font-size: 16px;
+    left: 0;
+
+    max-width: 85%;
+    top: 0;
+  }
+
+  .menuDiv h5 {
+    font-size: 20px;
+  }
+
+  #menuP3 {
+    padding-bottom: 7px !important;
+    margin-bottom: 7px !important;
+  }
+
+  #menuP1 {
+    margin-left: 5px;
+  }
+
+  span:hover {
+    font-size: 18px;
+  }
+  #mePic {
+    visibility: hidden;
+  }
+  #mePicMobile {
+    height: auto;
+    width: 171px;
+    visibility: visible;
+    padding-bottom: 20px;
+  }
+  span {
+    /* background-image: linear-gradient(
+      transparent 3vw,
+      #f243b3 50%,
+      #ffca47 100%
+    ); */
+    /* background-image: linear-gradient(
+      90deg,
+      transparent 3vw,
+      rgba(255, 255, 255, 1) 55%,
+      rgba(255, 255, 255, 0.6825105042016807) 100%
+    ); */
+
+    border-top: 0px solid transparent;
+    border-right: 0px solid transparent;
+    border-left: 0px solid transparent;
+    border-bottom: 2px solid white;
+    padding-bottom: 10px;
+    /* vertical-align: 2em;
+    border-bottom: 0.3em solid transparent;
+    border-image: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(255, 255, 255, 0.9780287114845938) 15%,
+      rgba(255, 255, 255, 0.9472163865546218) 56%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    border-image-slice: 1; */
   }
 }
 
@@ -255,10 +544,47 @@ h2 {
     letter-spacing: 20px;
   }
 
+  .textContain {
+    position: absolute;
+    top: 4%;
+    height: 88%;
+    overflow-y: scroll;
+    max-width: 40%;
+    left: 52%;
+    padding-bottom: 20px;
+    animation: fadeIn 1s;
+  }
+
+  .menuDiv {
+    min-width: auto;
+    overflow-y: scroll;
+  }
+
+  .menuDiv h3 {
+    margin-right: 55%;
+  }
+
+  #h32 {
+    margin-right: 55% !important;
+  }
+
+  #mePic {
+    position: absolute;
+    right: 35px;
+    top: 70px;
+    height: auto;
+    width: 210px;
+  }
+
   .App h1 {
     font-size: 92px;
     letter-spacing: 20px;
   }
+}
+
+.App {
+  max-width: 1180px;
+  margin: auto;
 }
 
 textarea,
@@ -299,4 +625,12 @@ input[type="week"] {
   margin: 0;
 
   padding: 0;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+::selection {
+  background: #ffff47; /* WebKit/Blink Browsers */
 }
