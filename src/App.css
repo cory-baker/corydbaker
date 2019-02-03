@@ -160,7 +160,7 @@
     height: 0;
   }
   to {
-    height: 380px;
+    height: 700px;
   }
 }
 
@@ -169,7 +169,7 @@
     height: 0;
   }
   to {
-    height: 287px;
+    height: 450px;
   }
 }
 
@@ -251,9 +251,8 @@ a {
 .menuDiv h3 {
   display: inline-block;
   font-size: 30px;
-
   margin-right: 50%;
-  margin-top: 50px;
+  margin-top: 133px;
   letter-spacing: 12px;
 }
 
@@ -297,7 +296,7 @@ span:hover {
 
 #triangle {
   height: 50px;
-  width: 73%;
+  width: 90%;
   margin-top: -2.5px;
   padding-bottom: 20px;
 }
@@ -306,11 +305,11 @@ span:hover {
   position: relative;
   text-align: right;
 
-  height: 380px;
+  height: 700px;
   margin: 0 auto;
   overflow: auto;
   min-width: 660px;
-  width: 68.5%;
+  width: 90%;
   border: 3px solid white;
   animation: menuHeight 1.5s;
   overflow: hidden;
@@ -330,7 +329,7 @@ span:hover {
 .menuDiv p,
 h5,
 a {
-  display: inline-block;
+  display: inherit;
   padding-bottom: 2px;
   text-align: left;
   margin-top: auto;
@@ -348,10 +347,18 @@ a {
   text-align: center;
 }
 
+#menuP1 {
+  margin-top: 33%;
+}
+
+#menuP3 {
+  margin-top: 33%;
+}
+
 #mePic {
   position: absolute;
   right: 85px;
-  top: 62px;
+  top: 33%;
   height: auto;
   width: 230px;
 }
@@ -410,6 +417,10 @@ a {
     text-align: center;
   }
 
+  #menuP3 {
+    margin-top: 10px;
+  }
+
   .textContain {
     position: relative;
     top: auto;
@@ -449,7 +460,7 @@ a {
   }
 
   .menuDiv {
-    height: 287px;
+    height: 450px;
     overflow-y: scroll;
     margin-top: 10px;
     min-width: auto;
@@ -491,6 +502,7 @@ a {
   }
 
   #menuP1 {
+    margin-top: 10px;
     margin-left: 5px;
   }
 
@@ -571,7 +583,7 @@ a {
   #mePic {
     position: absolute;
     right: 35px;
-    top: 70px;
+    top: 33%;
     height: auto;
     width: 210px;
   }
