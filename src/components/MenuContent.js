@@ -5,9 +5,10 @@ import mePic from "../assets/mebest.png";
 import mamVid from "../assets/mamVid.mp4";
 import wkol from "../assets/wkol.MP4";
 import nacs from "../assets/nacs-tobacco-kiosk.mov";
-
+import { Document, Page } from "react-pdf";
 import astellas from "../assets/astellas.mov";
-import top19 from "../assets/top19.png";
+import dycd from "../assets/dycd.png";
+import resume from "../assets/resume.pdf";
 
 import App from "../App";
 class MenuContent extends Component {
@@ -28,6 +29,7 @@ class MenuContent extends Component {
       });
     } else {
     }
+
     this.setState({
       projects: "",
       contact: "",
@@ -40,8 +42,10 @@ class MenuContent extends Component {
             Tech, a digital consultancy.
             <br />
             <br />
-            Outside of tech, I love spending time with my dog (Sasha), playing
-            video games too much, and being outdoors.
+            Outside of Javascript, I love retro tech, video games, and my dog
+            (Sasha).
+            <br />
+            <br />
           </p>
         </div>
       )
@@ -69,11 +73,12 @@ class MenuContent extends Component {
           <br />
           <br />
           <br />
+
           <h5 id="menuP2" className="fadeIn">
-            Astellas Event Survey
+            Reynolds Tobacco Product Showcase
           </h5>
-          <p>iPad Web App</p>
-          <video className="fadeIn" id="mamVid" controls src={astellas} />
+          <p>React Web App</p>
+          <video className="fadeIn" id="mamVid" controls src={nacs} />
           <br />
           <br />
           <br />
@@ -86,23 +91,30 @@ class MenuContent extends Component {
           <br />
           <br />
           <h5 id="menuP2" className="fadeIn">
-            Reynolds Tobacco Product Showcase
+            Astellas Event Survey
           </h5>
-          <p>React Web App</p>
-          <video className="fadeIn" id="mamVid" controls src={nacs} />
+          <p>iPad Web App</p>
+          <video className="fadeIn" id="mamVid" controls src={astellas} />
           <br />
           <br />
           <br />
           <h5 id="menuP2" className="fadeIn">
-            Top19
+            NYC Dept. Youth and Community Development
           </h5>
-          <p id="menuP4">Top News Storis</p>
-          <a target="_blank" href="https://s3.amazonaws.com/top19/index.html">
-            <img id="top19" src={top19} />
+          <p id="menuP4">
+            Fully responsive HTML/CSS/jQuery designs. Full site launches in
+            March.
+          </p>
+          <a
+            target="_blank"
+            href="https://s3.amazonaws.com/dycd/statusAndContext.html"
+          >
+            <img id="top19" src={dycd} />
           </a>
           <br />
           <br />
           <br />
+
           <p className="fadeIn">and many more...</p>
         </div>
       )
@@ -146,6 +158,15 @@ class MenuContent extends Component {
             href="https://www.facebook.com/corydbaker"
           >
             Facebook
+          </a>
+          <br />
+          <br />
+          <a
+            id="menuP3"
+            href="https://drive.google.com/file/d/1kzBxTKAS8zuFVlR7tEl2c282ifF8F5S-/view?usp=sharing"
+            target="#"
+          >
+            View my resume
           </a>
         </div>
       )
